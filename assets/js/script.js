@@ -210,7 +210,6 @@ const finalScoreEl = document.getElementById('finalScore');
 const timerEl = document.getElementById('timer');
 const progressEl = document.getElementById('progress');
 
-
 startBtn.addEventListener('click', startQuiz);
 if (welcomeForm) {
   welcomeForm.addEventListener('submit', function(e) {
@@ -584,6 +583,7 @@ function updateProgress() {
     progressEl.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
   }
 }
+
 function updateProgressBar() {
   const progressBarFill = document.querySelector('.progress-bar-fill');
   if (!progressBarContainer || !progressBar || !progressBarLabel || !progressBarFill) return;

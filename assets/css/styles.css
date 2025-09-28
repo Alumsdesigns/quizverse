@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;800&family=Roboto:wght@400;700&display=swap');
 
 :root {
-  /* --- Colors --- */
   --color-primary: #64b5f6;
   --color-primary-dark: #1976d2;
   --color-secondary: #9575cd;
@@ -18,7 +17,6 @@
   --color-soft-black: #333;
   --color-muted-text: #888;
 
-  /* --- Typography --- */
   --font-main: 'Lato', Arial, Helvetica, sans-serif;
   --font-heading: 'Playfair Display', serif;
   --font-choice: 'Roboto', Arial, Helvetica, sans-serif;
@@ -32,7 +30,6 @@
   --font-size-feedback: 1.2em;
   --font-size-congrats: 1.3em;
 
-  /* --- Spacing --- */
   --radius-default: 6px;
   --radius-strong: 18px;
   --radius-btn: 4px;
@@ -43,29 +40,22 @@
   --shadow-large: 0 10px 28px rgba(33,150,243,0.13),
                  0 2px 8px rgba(0,0,0,0.10);
 
-  /* --- Gradients --- */
   --gradient-bg: linear-gradient(135deg, #42a5f5 0%, #7b1fa2 60%, #ab47bc 100%);
   --gradient-btn: linear-gradient(90deg, #3949ab 0%, #7c4dff 100%);
   --gradient-btn-hover: linear-gradient(90deg, #7c4dff 0%, var(--color-primary) 100%);
   --gradient-feedback-ok: linear-gradient(90deg, var(--color-success) 0%, var(--color-success-dark) 100%);
   --gradient-feedback-bad: linear-gradient(90deg, var(--color-error) 0%, var(--color-error-accent) 100%);
 
-  /* --- Misc --- */
   --transition-default: 0.3s;
   --transition-btn: 0.3s;
   --progress-bar-height: 28px;
   --progress-bar-radius: 16px;
   --congrats-anim: 0.7s cubic-bezier(.68,-0.55,.27,1.55);
 
-  /* --- Sizes for hero image --- */
   --hero-img-mobile-width: 90vw;
   --hero-img-tablet-width: 90vw;
   --hero-img-desktop-width: 380px;
 }
-
-/*****************************************
- * Base and Layout
- *****************************************/
 
 html {
   font-size: var(--font-size-base);
@@ -79,7 +69,6 @@ body {
   line-height: 1.6;
 }
 
-/* Headings & Typography */
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
   font-family: var(--font-heading);
@@ -99,7 +88,6 @@ h3 {
   margin-bottom: 0.75rem;
 }
 
-/* Container */
 .container {
   overflow: hidden;
   min-height: 85vh;
@@ -115,7 +103,6 @@ h3 {
   padding-bottom: 20px;
 }
 
-/* Main Screens */
 .screen {
   display: flex;
   flex-direction: column;
@@ -131,9 +118,6 @@ h3 {
   opacity: 0;
 }
 
-/******************************************
- * Buttons & Choices
- ******************************************/
 button {
   font-size: 1em;
   padding: 12px 0;
@@ -184,7 +168,6 @@ button:focus-visible {
   margin: 10px;
 }
 
-/* Choices styling */
 #choices {
   margin-top: 20px;
   width: 100%;
@@ -219,10 +202,6 @@ button:focus-visible {
   font-weight: bold;
 }
 
-
-/******************************************
- * Feedback / Progress Bars / Feedback states
- ******************************************/
 #feedback {
   font-size: 1em;
   padding: 10px;
@@ -253,7 +232,6 @@ button:focus-visible {
   margin-left: 10px;
 }
 
-/* Timer, Question, Label, Progress */
 #timer {
   font-size: 1.2em;
   font-weight: bold;
@@ -316,7 +294,6 @@ header {
   overflow-wrap: break-word;
 }
 
-/* Progress Bar and Container */
 #question-container { 
   width: 100%; 
 }
@@ -377,9 +354,6 @@ header {
   box-shadow: 0 0 0 3px var(--color-primary-dark);
 }
 
-/******************************************
- * Universal Close (X) Button
- ******************************************/
 .close-x {
   position: absolute;
   top: 8px;
@@ -446,9 +420,6 @@ header {
   border: 0;
 }
 
-/******************************************
- * Accessibility
- ******************************************/
 .skip-link {
   position: absolute;
   left: -999px;
@@ -475,15 +446,11 @@ header {
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
 }
 
-/******************************************
- * Forms and Feedback
- ******************************************/
 form:focus-within {
   outline: 2px solid var(--color-primary-dark);
   outline-offset: 2px;
 }
 
-/* Congrats message */
 .congrats-message {
   display: flex;
   align-items: center;
@@ -508,7 +475,6 @@ form:focus-within {
   animation: confetti-bounce 1.2s infinite alternate cubic-bezier(.68,-0.55,.27,1.55);
 }
 
-/* Pop-in and bounce */
 @keyframes pop-in {
   0% { transform: scale(0.7); opacity: 0; }
   70% { transform: scale(1.1); opacity: 1; }
@@ -520,7 +486,6 @@ form:focus-within {
   100% { transform: translateY(-8px) rotate(-8deg); }
 }
 
-/* Welcome Form */
 #welcome-form {
   display: flex;
   flex-direction: column;
@@ -597,16 +562,12 @@ form:focus-within {
   align-self: flex-start;
 }
 
-/* Remove focus outlines for non-accessibility reasons */
 input:focus, textarea:focus, select:focus, button:focus { outline: none; }
 input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible { outline: none; }
 #result-screen { outline: none; }
 #result-screen:focus { outline: none; }
 #result-screen *:focus { outline: none; }
 
-/******************************************
- * Hero Section
- ******************************************/
 .hero-grid {
   display: flex;
   flex-direction: column;
@@ -746,9 +707,6 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   50% { transform: translateY(-8px) scale(1.02) rotateZ(-1deg); }
 }
 
-/******************************************
- * Stats & Error
- ******************************************/
 .stats-row {
   border-radius: var(--radius-default);
   max-width: 100vw;
@@ -788,14 +746,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   opacity: 0.7;
 }
 
-/* Top hero image */
 .mobile-hero-img-top { display: block; margin-bottom: 0.5em; }
 
-
-
-/******************************************
- * Error Message
- ******************************************/
 .error-message {
   width: 90vw;
   max-width: 100%;
@@ -849,17 +801,12 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   font-size: 1em; 
 }
 
-/* results screen */
 #result-screen.screen {
   align-items: flex-start;
   max-width: 100%;
   padding-left: 1rem;
 }
 
-
-/***********************
- * Responsive Tablet
- ***********************/
 @media (min-width: 601px) and (max-width: 1200px) {
   
   body { 
@@ -1069,10 +1016,6 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
    }
 
 }
-
-/****************************
- * Responsive Desktop
- ***************************/
 
 @media (min-width: 1201px) {
 
