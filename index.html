@@ -75,9 +75,12 @@
     <header class="quiz-game">
       <h2 id="quiz-label">Answer the question below</h2>
     </header>
+    
     <div id="progress-container">
-      <h3 id="progress"></h3>
+      <div id="progress" role="progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      </div>
     </div>
+
     <div id="question-container">
       <div id="question-header">
         <h4 id="question">Question will appear here</h4>
@@ -91,11 +94,10 @@
 
     </div>
   </section>
-
   
   <section id="result-screen" class="screen hidden" aria-labelledby="result-label" aria-hidden="true" tabindex="-1">
     <header>
-      <h2 id="result-label">Quiz Completed!</h2>
+      <h1 id="result-label">Quiz Completed!</h1>
     </header>
     <div id="congrats" class="congrats-message" role="status" aria-live="polite" aria-atomic="true" hidden>
       <span class="congrats-emoji" aria-hidden="true">🎉</span>

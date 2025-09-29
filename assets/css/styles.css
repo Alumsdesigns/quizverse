@@ -70,7 +70,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
+  margin-top: 20px;
   font-family: var(--font-heading);
 }
 
@@ -102,6 +102,10 @@ h3 {
   padding-bottom: 20px;
 }
 
+.result-label {
+  color: var(--color-base-light);
+}
+
 .screen {
   display: flex;
   flex-direction: column;
@@ -121,8 +125,8 @@ button {
   font-size: 1em;
   padding: 12px 0;
   width: 100%;
-  min-height: 44px;
-  margin: 20px 10px;
+  min-height: 24px;
+  margin: 10px 10px;
   cursor: pointer;
   border: none;
   border-radius: var(--radius-btn);
@@ -145,7 +149,7 @@ button:hover,
 button:focus-visible {
   background: var(--gradient-btn-hover);
   color: var(--color-base-light);
-  box-shadow: 0 4px 16px rgba(60,60,120,0.16);
+  box-shadow: 0 4px 16px var(--color-success-dark);
 }
 
 #nextBtn {
@@ -217,7 +221,7 @@ button:focus-visible {
   color: var(--color-base-light);
   background: var(--gradient-feedback-ok);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(60,60,120,0.10);
+  box-shadow: 0 2px 8px var(--color-success-dark);
   transition: background var(--transition-btn), color var(--transition-btn);
   margin-left: 10px;
 }
@@ -226,7 +230,7 @@ button:focus-visible {
   color: var(--color-base-light);
   background: var(--gradient-feedback-bad);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(120,60,60,0.10);
+  box-shadow: 0 2px 8px var(--color-error);
   transition: background var(--transition-btn), color var(--transition-btn);
   margin-left: 10px;
 }
@@ -255,11 +259,11 @@ button:focus-visible {
 @keyframes flash-red {
   0%, 50% {
     background: linear-gradient(90deg, #ff0000 0%, #cc0000 100%);
-    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 2px 8px var(--color-error);
   }
   51%, 100% {
     background: linear-gradient(90deg, var(--color-error) 0%, var(--color-error-accent) 100%);
-    box-shadow: 0 2px 8px rgba(120,60,60,0.10);
+    box-shadow: 0 2px 8px var(--color-error);
   }
 }
 
@@ -320,11 +324,11 @@ header {
   border-radius: var(--progress-bar-radius);
   overflow: hidden;
   position: relative;
-  box-shadow: 0 2px 8px rgba(60,60,120,0.08);
+  box-shadow: 0 2px 8px var(--color-success-dark);
   outline: none;
   transition: background 0.2s;
   display: block;
-  margin: 20px 0;
+  margin: 8px 0;
 }
 
 .progress-bar-fill {
@@ -357,9 +361,9 @@ header {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255,255,255,0.95);
+  width: 20px;
+  height: 20px;
+  background: var(--color-base-light);
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
@@ -390,13 +394,13 @@ header {
 }
 
 .close-x__icon {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   display: block;
 }
 
 .close-x__icon line {
-  stroke: #d32f2f;
+  stroke: var(--color-error);
   stroke-width: 3;
   stroke-linecap: round;
   transition: stroke var(--transition-btn);
@@ -404,7 +408,7 @@ header {
 
 .close-x:hover .close-x__icon line,
 .close-x:focus .close-x__icon line {
-  stroke: #b71c1c;
+  stroke: var(--color-error);
 }
 
 .close-x__label {
@@ -442,7 +446,7 @@ header {
   width: auto;
   height: auto;
   outline: 3px solid var(--color-primary-dark);
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+  box-shadow: 0 2px 8px var(--color-success-dark);
 }
 
 form:focus-within {
@@ -456,7 +460,7 @@ form:focus-within {
   justify-content: center;
   gap: 12px;
   background: #fffbe6;
-  color: #1b5e20;
+  color: var(--color-base-dark);
   border: 2px solid var(--color-accent);
   border-radius: 8px;
   font-size: var(--font-size-congrats);
@@ -528,7 +532,7 @@ form:focus-within {
   border: 1.5px solid #b3e5fc;
   border-radius: var(--radius-input);
   background: rgba(255,255,255,0.95);
-  color: #222;
+  color: var(--color-base-dark);
   transition: border-color var(--transition-btn), box-shadow var(--transition-btn);
   outline: none;
   font-family: inherit;
@@ -596,7 +600,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   margin-bottom: 8px;
   display: inline-block;
   background: var(--color-info-bg);
-  color: var(--color-primary-dark);
+  color: var(--color-base-dark);
   font-weight: 600;
   border-radius: var(--radius-badge);
   letter-spacing: 0.5px;
@@ -633,7 +637,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
 }
 
 .hero-desc {
-  max-width: 60vw;
+  max-width: 90vw;
   font-size: 1.05em;
   margin-bottom: 0.7em;
   margin-top: 0.2em;
@@ -755,17 +759,17 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   padding: 4px 0 4px 10px;
   margin-top: 1px;
   margin-bottom: 2px;
-  color: #d32f2f;
+  color: var(--color-error);
   min-height: 1.2em;
   font-weight: 400;
   font-family: var(--font-main);
   line-height: 1.4;
   transition: opacity var(--transition-btn) ease, transform 0.2s ease;
-  border-left: 3px solid #d32f2f;
+  border-left: 3px solid var(--color-error);
   background-color: var(--color-base-light);
   border-radius: 0 4px 4px 0;
   text-align: left;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px var(--color-base-dark);
   margin-left: 0;
   margin-right: 0;
 }
@@ -784,13 +788,13 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
 }
 
 #welcome-form input:invalid {
-  border-color: #d32f2f;
-  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 2px var(--color-error);
   font-size: 1em; 
 }
 
 #welcome-form input:invalid:focus {
-  border-color: #d32f2f;
+  border-color: var(--color-error);
   box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.3);
 }
 
@@ -885,7 +889,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     display: block; 
     overflow: hidden; 
     border-radius: 14px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    box-shadow: 0 4px 24px var(--color-base-dark);
   }
   
   .hero-img { 
@@ -949,7 +953,6 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     border-radius: 12px; 
     padding-left: 1rem;
     text-align: center; 
-  
   }
 
   #welcome-form button {
@@ -976,7 +979,6 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     padding: 10px 0;
     margin: 0px 0;
     font-size: var(--font-size-choice);
-    
   }
 
   .stats-row {
@@ -1013,7 +1015,6 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     max-width: fit-content;
    }
 
-
   #progress-bar { 
     max-width: 340px; 
     height: 28px; 
@@ -1021,8 +1022,20 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   }
 
   .congrats-message { 
-    max-width: fit-content; 
+    max-width: 85vh; 
    }
+
+  .close-x {
+    top: 14px; 
+    right: 14px; 
+    width: 40px;
+    height: 40px;
+  }
+
+  .close-x__icon { 
+    width: 20px;
+    height: 20px; 
+  }
 
 }
 
@@ -1077,7 +1090,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     font-size: 1.35em; 
     width: auto;
     min-height: auto; 
-    }
+  }
 
   #choices { 
     gap: 0; 
@@ -1089,7 +1102,6 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     padding: 10px 0;
     margin: 8px 0;
     font-size: var(--font-size-choice);
-    
   }
 
   #feedback { 
@@ -1262,12 +1274,10 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   #progress-container {
     width: 100%;
     margin: 0;
-    padding: 1rem 0;
   }
 
-
   #progress {
-      font-size: var(--font-size-h3);
+    font-size: var(--font-size-h3);
   }
 
   .stat { 
@@ -1300,12 +1310,12 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     top: 16px; 
     right: 16px; 
     width: 48px;
-     height: 48px;
+    height: 48px;
   }
 
   .close-x__icon { 
     width: 28px;
-     height: 28px; 
+    height: 28px; 
     }
 
   .congrats-message { 
