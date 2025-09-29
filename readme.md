@@ -310,7 +310,7 @@ An accessibility bug was fixed where the "Close Quiz" button, a focusable elemen
 
     Resolution: The code was updated to ensure that aria-hidden="true" is never set on an ancestor of a focused or focusable element. This was achieved by using the inert attribute or by programmatically moving focus before hiding screens. This fix improves navigation and resolves the "Blocked aria-hidden" console warning.
 
-![Accessibility bug showing blocked aria-hidden on focusable element example](./assets/images/production-bug-fixes/Screenshot%202025-09-29%20at%2001.38.54.png)
+![Accessibility bug showing blocked aria-hidden on focusable element example](./assets/images/production-bug-fixes/aria-hiiden-error.png)
 
 
 2. Regex Pattern Error:
