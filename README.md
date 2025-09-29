@@ -251,8 +251,8 @@ All HTML validation issues have been resolved:
 
 | Test | Screenshot |
 |------|------------|
-| HTML Validation | ![HTML Errors](./assets/screenshots//html-validation-errors.png) |
-| HTML Validation | ![HTML Erros fixed](./assets/screenshots/html-validation-complete.png) |
+| HTML Validation | ![HTML Errors](./assets/images/screenshots-validators-checks/html-validation-errors.png) |
+| HTML Validation | ![HTML Erros fixed](./assets/images/screenshots-validators-checks/html-validation-complete.png) |
 
 
 ### CSS Validation
@@ -261,7 +261,7 @@ All HTML validation issues have been resolved:
 
 | Test | Screenshot |
 |------|------------|
-| CSS Validation | ![CSS Valid](./assets/screenshots/css-valid.png) |
+| CSS Validation | ![CSS Valid](./assets/images/screenshots-validators-checks/css-valid.png) |
 
 
 ### Manual User Testing Table
