@@ -22,11 +22,11 @@
   --font-choice: 'Roboto', Arial, Helvetica, sans-serif;
   --font-size-base: 14px;
   --font-size-lg: 1.3em;
-  --font-size-xl: 1.7em;
-  --font-size-h2: 1.8em;
-  --font-size-h3: 1.6em;
-  --font-size-h4: 1.4em;
-  --font-size-choice: 1.2em;
+  --font-size-xl: 1.5em;
+  --font-size-h2: 1.2em;
+  --font-size-h3: 1.1em;
+  --font-size-h4: 1.05em;
+  --font-size-choice: 1em;
   --font-size-feedback: 1.2em;
   --font-size-congrats: 1.3em;
 
@@ -232,7 +232,7 @@ button:focus-visible {
 }
 
 #timer {
-  font-size: 1.2em;
+  font-size: var(--font-size-choice);
   font-weight: bold;
   color: var(--color-base-light);
   margin-top: 0.5rem;
@@ -807,6 +807,17 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
+   :root {
+    --font-size-base: 15px; 
+    --font-size-lg: 1.4em;
+    --font-size-xl: 1.6em;
+    --font-size-h2: 1.5em; 
+    --font-size-h3: 1.3em;
+    --font-size-h4: 1.15em;
+    --font-size-choice: 1.1em;
+    --font-size-feedback: 1.3em;
+    --font-size-congrats: 1.4em;
+  }
   
   body { 
     padding: 20px; 
@@ -996,7 +1007,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   }
 
   #nextBtn { 
-    font-size: 1.2em; 
+    font-size: var(--font-size-choice); 
     min-height: 52px; 
     padding: 16px 16px; 
     max-width: fit-content;
@@ -1016,6 +1027,17 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
 }
 
 @media (min-width: 1201px) {
+   :root {
+    --font-size-base: 16px;
+    --font-size-lg: 1.6em;
+    --font-size-xl: 2em;
+    --font-size-h2: 1.8em;
+    --font-size-h3: 1.5em;
+    --font-size-h4: 1.3em;
+    --font-size-choice: 1.2em;
+    --font-size-feedback: 1.4em;
+    --font-size-congrats: 1.5em;
+  }
 
   body { 
     padding: 10px; 
