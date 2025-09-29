@@ -453,11 +453,18 @@ function handleAnswer() {
     feedbackEl.textContent = `Incorrect! The correct answer is ${correctAnswer}.`;
     feedbackEl.classList.add('incorrect');
   }
+  
   document.querySelectorAll('input[name="choice"]').forEach(input => {
     input.disabled = true;
     if (input.value === correctAnswer) {
-      input.parentElement.style.backgroundColor = '#d4edda';
-    }
+      input.parentElement.style.backgroundColor = '#0aba83';
+      input.parentElement.style.color = '#000'
+    } else if (input.checked && input.value !== correctAnswer) {
+    input.parentElement.style.backgroundColor = '#ff5858'; 
+    input.parentElement.style.color = '#000';
+    input.parentElement.style.textDecoration = 'line-through';
+    input.parentElement.style.fontWeight = 'normal';
+  }
   });
   nextBtn.classList.remove('hidden');
   nextBtn.setAttribute('aria-disabled', 'false');

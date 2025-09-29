@@ -15,7 +15,7 @@
   --color-base-light: #fafafa;
   --color-base-dark: #1a1a1a;
   --color-soft-black: #333;
-  --color-muted-text: #888;
+  --color-muted-text: #666;
 
   --font-main: 'Lato', Arial, Helvetica, sans-serif;
   --font-heading: 'Playfair Display', serif;
@@ -575,7 +575,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   max-width: 100vw;
   align-items: stretch;
   min-height: 340px;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
   width: 100%;
 }
 
@@ -815,8 +815,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
 
   .container {
     max-width: 90vw;
-    min-height: 85vh; 
-    max-height: 90vh;
+    min-height: fit-content; 
     margin: 12px auto 0 auto; 
     background: var(--gradient-bg);
     padding: 30px 24px;
