@@ -19,12 +19,14 @@
   --font-size-base: 14px;
   --font-size-lg: 1.3em;
   --font-size-xl: 1.5em;
+  --font-size-h1: 1.35em;
   --font-size-h2: 1.2em;
   --font-size-h3: 1.1em;
   --font-size-h4: 1.05em;
   --font-size-choice: 1em;
   --font-size-feedback: 1.2em;
   --font-size-congrats: 1.3em;
+  --font-size-congrats-mobile: 1em;
 
   --radius-default: 6px;
   --radius-strong: 18px;
@@ -98,8 +100,9 @@ h3 {
   padding-bottom: 20px;
 }
 
-.result-label {
+#result-label {
   color: var(--color-base-light);
+  font-size: var(--font-size-h1);
 }
 
 .screen {
@@ -157,13 +160,13 @@ button:focus-visible {
 
 #restartBtn {
   max-width: fit-content;
-  padding: 24px;
-  margin: 0;
+  padding: 16px 16px;
+  margin: 10px;
 }
 
 #startBtn {
   max-width: fit-content;
-  padding: 24px 24px;
+  padding: 16px 16px;
   margin: 10px;
 }
 
@@ -459,14 +462,15 @@ form:focus-within {
   color: var(--color-base-dark);
   border: 2px solid var(--color-accent);
   border-radius: 8px;
-  font-size: var(--font-size-congrats);
+  font-size: var(--font-size-congrats-mobile);
   font-weight: bold;
   margin: 20px 0;
-  padding: 16px 16px;
+  padding: 16px 20px;
   box-shadow: 0 2px 12px rgba(255, 214, 0, 0.10);
   animation: pop-in var(--congrats-anim);
-  max-width: 80vw;
+  max-width: 75vw;
   overflow-wrap: break-word;
+  overflow: hidden;
 }
 
 .congrats-emoji {
@@ -475,14 +479,14 @@ form:focus-within {
 }
 
 @keyframes pop-in {
-  0% { transform: scale(0.7); opacity: 0; }
-  70% { transform: scale(1.1); opacity: 1; }
+  0% { transform: scale(0.8); opacity: 0; }
+  70% { transform: scale(1.05); opacity: 1; }
   100% { transform: scale(1); opacity: 1; }
 }
 
 @keyframes confetti-bounce {
   0% { transform: translateY(0); }
-  100% { transform: translateY(-8px) rotate(-8deg); }
+  100% { transform: translateY(-4px) rotate(-8deg); }
 }
 
 #welcome-form {
@@ -605,7 +609,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
 
 .hero-title-group {
   max-width: 100%;
-  font-size: 1.35em;
+  font-size: var(--font-size-h4);
   line-height: 1.15;
   margin-bottom: 0.2em;
   overflow-wrap: break-word;
@@ -811,7 +815,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     --font-size-base: 15px; 
     --font-size-lg: 1.4em;
     --font-size-xl: 1.6em;
-    --font-size-h2: 1.5em; 
+    --font-size-h1: 1.5em;
+    --font-size-h2: 1.4em; 
     --font-size-h3: 1.3em;
     --font-size-h4: 1.15em;
     --font-size-choice: 1.1em;
@@ -835,8 +840,9 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     overflow: hidden;
   }
 
-  .result-label {
-  color: var(--color-base-light);
+  #result-label {
+    color: var(--color-base-light);
+    font-size: var(--font-size-h1);
   }
 
   #quiz-label {
@@ -1022,7 +1028,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
   }
 
   .congrats-message { 
-    max-width: 85vh; 
+    max-width: 75vw; 
    }
 
   .close-x {
@@ -1044,7 +1050,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     --font-size-base: 16px;
     --font-size-lg: 1.6em;
     --font-size-xl: 2em;
-    --font-size-h2: 1.8em;
+    --font-size-h1: 1.7em;
+    --font-size-h2: 1.6em;
     --font-size-h3: 1.5em;
     --font-size-h4: 1.3em;
     --font-size-choice: 1.2em;
@@ -1090,6 +1097,11 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     font-size: 1.35em; 
     width: auto;
     min-height: auto; 
+  }
+
+  #result-label {
+    color: var(--color-base-light);
+    font-size: var(--font-size-h1);
   }
 
   #choices { 
@@ -1319,7 +1331,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
     }
 
   .congrats-message { 
-    max-width: fit-content; 
+    max-width: 75vw;
    }
 
   #result-screen.screen {
