@@ -230,6 +230,7 @@ All images and icons are designed to be clear and accessible.
 - [Canva](https://www.canva.com/en_gb/)
 - [Figma](https://www.figma.com/)
 - [GoogleFonts](https://fonts.google.com/)
+- [Wave for Accessibility](https://wave.webaim.org/)
 ---
 
 # 5. Testing
@@ -252,6 +253,7 @@ All HTML validation issues have been resolved:
 |------|------------|
 | HTML Validation | ![HTML Errors](./assets/screenshots//html-validation-errors.png) |
 | HTML Validation | ![HTML Erros fixed](./assets/screenshots/html-validation-complete.png) |
+
 
 ### CSS Validation
 - All CSS validation passed without errors:
@@ -297,8 +299,7 @@ The below fixes where captured by Collegue QA and fixed
 
 - Improved Responsiveness: Headings, text sizes, and animation scales were adjusted for a more consistent and appropriate user experience across a wide range of devices
 
-
-- Color Variables & Contrast. Updated global color variables to improve brand consistency. Fixed contrast issues for readability and WCAG compliance.
+- Color Variables & Contrast detected using [Wave for Accessibility](https://wave.webaim.org/). Also added updated global color variables to improve brand consistency. Fixed contrast issues for readability and WCAG compliance.
 
 - Favicon Added. Added a site favicon for improved branding and user experience.
 
