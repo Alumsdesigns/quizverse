@@ -396,6 +396,8 @@ nextBtn.addEventListener('click', showNextQuestion);
 restartBtn.addEventListener('click', resetQuiz);
 if (closeQuizBtn) {
   closeQuizBtn.addEventListener('click', function() {
+    const safeFocus = welcomeScreen.querySelector('input, button') || document.body;
+    safeFocus.focus();
     hideScreen(quizScreen);
     showScreen(welcomeScreen);
     closeQuizBtn.style.display = 'none';
@@ -538,13 +540,19 @@ function resetQuiz() {
 }
 
 function showScreen(screen) {
+  if (!screen) return;
   screen.classList.remove('hidden');
   screen.setAttribute('aria-hidden', 'false');
+  screen.removeAttribute('inert');
+  const firstFocusable = screen.querySelector('input, button, [tabindex]:not([tabindex="-1"])');
+  if (firstFocusable) firstFocusable.focus();
 }
 
 function hideScreen(screen) {
+  if (!screen) return;
   screen.classList.add('hidden');
   screen.setAttribute('aria-hidden', 'true');
+  screen.setAttribute('inert', ''); 
 }
 
 function startTimer() {
