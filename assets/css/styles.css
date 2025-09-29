@@ -90,8 +90,7 @@ h3 {
 
 .container {
   overflow: hidden;
-  min-height: 85vh;
-  max-height: fit-content;
+  min-height: fit-content;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -1040,7 +1039,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-
 
   .container {
     max-width: 90vw;
-    min-height: 80vh; 
+    min-height: fit-content; 
     margin: 12px auto 0 auto; 
     background: var(--gradient-bg);
     padding: 30px 24px;
