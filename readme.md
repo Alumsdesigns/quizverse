@@ -4,7 +4,7 @@ Advanced Online Quiz is a modern, accessible web app for testing and sharpening 
 
 The primary audience includes students, quiz enthusiasts, and anyone looking to learn or test their general knowledge in a friendly, accessible environment.
 
-![Mock-ups Across Devices](assets/images/website-live-mockups.png)
+![Mock-ups Across Devices](./assets/images/website-live-mockups.png)
 
 [View deployed Website "Quizverse"](https://alumsdesigns.github.io/quizverse/)
 
@@ -57,7 +57,7 @@ As the site owner:
 ### Current Features
 
 - __F01 Input Element__ The Input element allows Users to enter their name to start the quiz. It has a clear call to action within the box and above it.
-[Input Element](assets/images/input-element.png)
+[Input Element](./assets/images/input-element.png)
 
 - __F01 Input Element & User Validation__
     - Users must enter their name to start the quiz.
@@ -66,7 +66,7 @@ As the site owner:
     - All input fields and buttons are keyboard accessible and screen reader friendly.
     - Clear call to action in the label and button.
     The Input element allows Users to enter their name to start the quiz. It has a clear call to action within the box and above it.
-    [Input Element Validation Example](assets/images/input-validation-example.png)
+    [Input Element Validation Example](./assets/images/input-validation-example.png)
 
 - __Timed Questions__
     - Each question features a visible countdown timer for added challenge.
@@ -116,7 +116,7 @@ As the site owner:
 - **Responsive Hero Section:** A visually appealing hero section with a title and a descriptive paragraph gives users a brief overview of the quiz. A floating illustration adds a subtle, modern touch.
 
 - **"Start Quiz Now"** Button: A prominent button guides users to start the quiz once their name is entered.
-![Welcome Screen](assets/images/welcome-page.png)
+![Welcome Screen](./assets/images/welcome-page.png)
 
 ### Quiz Screen
 - This is the main interactive section of the app, built to be engaging and user-friendly.
@@ -134,11 +134,11 @@ As the site owner:
 - **Close Button:** A universal "X" button is available on the quiz screen, allowing users to exit the quiz at any time and return to the welcome screen. 
 
 **Correct answer image example:**
-![Quiz In Progress 1](assets/images/second-page.png)
+![Quiz In Progress 1](./assets/images/second-page.png)
 
 
 **Incorrect answer image example with alert red:**
-![Quiz In Progress 2](assets/images/third-page.png)
+![Quiz In Progress 2](./assets/images/third-page.png)
 
 
 ### Result Screen 
@@ -150,7 +150,7 @@ As the site owner:
 - **Animated Congratulations:** If a user achieves a perfect score, a special celebratory message with a "pop-in" animation and emoji is displayed.
 
 - **Restart Option:** A prominent "Restart Quiz" button allows users to easily play again, encouraging repeat visits.
-![Result Screen 2](assets/images/congratulation-2.png)
+![Result Screen 2](./assets/images/congratulation-2.png)
 
 ### Additional Features
 - **Accessibility:** The site is designed with accessibility in mind, including a skip link for keyboard navigation, clear focus states, and ARIA attributes for screen reader support.
@@ -181,21 +181,21 @@ In the future we could add the following features
 The app is a single-page application with three main views: Welcome, Quiz, and Results. All views are accessible and responsive.
 
 ## Wireframes
-- [Welcome Screen Wireframe](assets/images/wireframe-welcome-page.png)
-- [Quiz Screen Wireframe](assets/images/wireframe-2.png)
-- [Quiz Progress 1 Screen Wireframe](assets/images/wireframe-3.png)
-- [Quiz Progress 2 Screen Wireframe](assets/images/wireframe-congrates1.png)
-- [Result Screen Wireframe](assets/images/wireframe-congrates2.png)
+- [Welcome Screen Wireframe](./assets/images/wireframe-welcome-page.png)
+- [Quiz Screen Wireframe](./assets/images/wireframe-2.png)
+- [Quiz Progress 1 Screen Wireframe](./assets/images/wireframe-3.png)
+- [Quiz Progress 2 Screen Wireframe](./assets/images/wireframe-congrates1.png)
+- [Result Screen Wireframe](./assets/images/wireframe-congrates2.png)
 
 User testing was completed and improvements added to highlevel mockups seen in the screenshots above under the features section.
 
 ## Colour Scheme
 #### Primary and Secondary Colors 
-![Colour Palette](assets/images/prim-second-colors.png)
+![Colour Palette](./assets/images/prim-second-colors.png)
 #### Functional and Feedback Colors
-![Colour Palette](assets/images/function-feedback-colors.png)
+![Colour Palette](./assets/images/function-feedback-colors.png)
 #### Neutral and Background Colors
-![Colour Palette](assets/images/neutral-background-colors.png)
+![Colour Palette](./assets/images/neutral-background-colors.png)
 
 The color palette was chosen for high contrast and readability, ensuring accessibility for all users.
 
@@ -240,7 +240,6 @@ This project was tested for:
 - Responsiveness on mobile, tablet, and desktop
 - HTML and CSS validation using W3C tools
 
-
 ### HTML Validation
 All HTML validation issues have been resolved:
 -  Removed trailing slashes from void elements (`<meta>`, `<link>`, `<input>`, `<img>`, `<line>`)
@@ -251,8 +250,8 @@ All HTML validation issues have been resolved:
 
 | Test | Screenshot |
 |------|------------|
-| HTML Validation | ![HTML Errors](assets/screenshots//html-validation-errors.png) |
-| HTML Validation | ![HTML Erros fixed](assets/screenshots/html-validation-complete.png) |
+| HTML Validation | ![HTML Errors](./assets/screenshots//html-validation-errors.png) |
+| HTML Validation | ![HTML Erros fixed](./assets/screenshots/html-validation-complete.png) |
 
 ### CSS Validation
 - All CSS validation passed without errors:
@@ -260,7 +259,7 @@ All HTML validation issues have been resolved:
 
 | Test | Screenshot |
 |------|------------|
-| CSS Validation | ![CSS Valid](assets/screenshots/css-valid.png) |
+| CSS Validation | ![CSS Valid](./assets/screenshots/css-valid.png) |
 
 
 ### Manual User Testing Table
@@ -283,6 +282,45 @@ All HTML validation issues have been resolved:
 | TC14         | CSS and animation effects on result                    | Finish quiz          | Animations load smoothly without lag                                             | As expected   | Pass      |
 | TC15         | Accessibility: Color contrast and font readability     | Visual check         | All text has sufficient contrast and readable font sizes                         | As expected   | Pass      |
 
+### Production Bug Fixes and updates
+
+The below fixes where captured by Collegue QA and fixed
+
+##### UI/UX & Layout Updates
+
+- The end of the container was cut off in landscape mode in laptop and ipad, i fixed this by adjusting the height to fit-content 
+
+- Adjusted Container Height: The main container's height was updated to fit-content to prevent content from being cut off in landscape mode on tablets and laptops. This ensures the entire page is visible without forcing a non-existent scroll.
+
+<br><br/>
+  ![Accessibility bug showing blocked aria-hidden on focusable element](./assets/images/production-bug-fixes/landscape-non-scrollable.png)
+
+- Improved Responsiveness: Headings, text sizes, and animation scales were adjusted for a more consistent and appropriate user experience across a wide range of devices
+
+
+- Color Variables & Contrast. Updated global color variables to improve brand consistency. Fixed contrast issues for readability and WCAG compliance.
+
+- Favicon Added. Added a site favicon for improved branding and user experience.
+
+
+#### Technical & Accessibility Fixes
+1. Accessibility (a11y) Fix: ARIA Hidden & Focusable Elements:
+An accessibility bug was fixed where the "Close Quiz" button, a focusable element, was mistakenly placed inside a parent element with aria-hidden="true". This violated WAI-ARIA guidelines by preventing screen readers from accessing the element despite it being focusable.
+
+    Resolution: The code was updated to ensure that aria-hidden="true" is never set on an ancestor of a focused or focusable element. This was achieved by using the inert attribute or by programmatically moving focus before hiding screens. This fix improves navigation and resolves the "Blocked aria-hidden" console warning.
+
+![Accessibility bug showing blocked aria-hidden on focusable element example](./assets/images/production-bug-fixes/Screenshot%202025-09-29%20at%2001.38.54.png)
+
+
+2. Regex Pattern Error:
+A console error related to a regular expression (regex) pattern was resolved. The fix ensures that the pattern correctly validates user input without causing unexpected errors.
+![Regex console error example](./assets/images/production-bug-fixes/regex-pattern-error.png)
+
+*Note other errors that appearded in my local development browser were due to chrome extensions and are not issues in production.
+
+3. Progress Bar Updates. Fixed styling issues and improved responsiveness on smaller screens. Adjusted label alignment for accessibility and smooth animations.
+
+4. Refactored codebase: removed unused comments, cleaned up CSS variables, and reorganized files.
 
 ### Browser Compatibility
 
@@ -292,16 +330,14 @@ All HTML validation issues have been resolved:
     - Edge Version 90.0.818.62 (Official build) (64-bit)
     - Safari on macOS Catalina (Safari  Version 14.0.3)
 
-
 ---
-
 
 # 6. Deployment and Local Development
 
 ## Deployment
 The site is deployed on GitHub Pages.
 
-[View deployed site](https://YOUR-DEPLOYED-LINK-HERE)
+[View deployed site](https://alumsdesigns.github.io/quizverse/)
 
 ## Local Development
 1. Clone the repository:
@@ -309,15 +345,14 @@ The site is deployed on GitHub Pages.
    git clone https://github.com/Alumsdesigns/quizverse.git
    cd quizverse
    ```
-2. Open `index.html` in your browser by useing visual studio code extension "Go Live"
+2. Open `index.html` in your browser by using visual studio code extension "Go Live"
 
 ### How this site was deployed
 
 - In the GitHub repository, navigate to the Settings tab, then choose Pages from the left hand menu 
-- From the source section drop-down menu, select the Master Branch
-- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment
-- Any changes pushed to the master branch will take effect on the live project
-
+- From the source section drop-down menu, select the Main Branch
+- Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment
+- Any changes pushed to the main branch will take effect on the live project
 
 
 ---
