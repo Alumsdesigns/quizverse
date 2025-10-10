@@ -264,6 +264,7 @@ All HTML validation issues have been resolved:
 | CSS Validation | ![CSS Valid](./assets/images/screenshots-validators-checks/css-valid.png) |
 
 
+
 ### Manual User Testing Table
 
 | Test Case ID | Test Description                                      | Input Data           | Expected Result                                                                 | Actual Result | Pass/Fail |
@@ -323,9 +324,47 @@ A console error related to a regular expression (regex) pattern was resolved. Th
 
 4. Refactored codebase: removed unused comments, cleaned up CSS variables, and reorganized files.
 
+5. Lates WCAG check and fixs. 
+
+Image overview of WCAG latest report before fixes below:
+
+![screen shot illerating the issues in the lates review](./assets/images/production-bug-fixes/demo-wucag-issues.png).
+
+6. Improved color contrast to meet WCAG guidelines.
+
+WCAG contrast error fail image:
+![Accesability bug showing colour contrast fail](./assets/images/production-bug-fixes/contrast-fail.png).
+
+WCAG contrast fix now has a pass the, see image:
+![Accesability colour contrast fix](./assets/images/production-bug-fixes/contrast-pass.png)
+
+It is interesting an error still shows but once you click on it, we see it passes. I am happy with this pass level contrast, I understand the gradients are hard for the tool to reconcile.
+
+7. Corrected heading level from h4 to h3 in quiz question
+
+WCAG heading alert error.
+
+![Accesability heading alert](./assets/images/production-bug-fixes/wcug-alert-headers.png).
+
+
+WCAG heading error fixed.
+
+![Accesability heading fix](./assets/images//production-bug-fixes/wcug-fixed.png).
+
+### Performance
+- Quizverse has been evaluated for performance and accessibility on desktop. The quiz interface runs smoothly, with quick transitions between screens and responsive button interactions. Accessibility features such as ARIA labels and keyboard focus management ensure an inclusive experience. To further enhance accessibility, i have improved the contrast between text and background elements for readability.
+
+Test occurred using Lighthouse within Chrome Dev Tools on 10/10/2025 with the following results:
+
+| Test | Screenshot |
+|------|------------|
+| Lighthouse Validation | ![Lighthouse](./assets/images/screenshots-validators-checks/lighthouse.png) |
+
+
 ### Browser Compatibility
 
-- Testing has been carried out on the following browsers :
+Testing has been carried out on the following browsers :
+
     - Chrome Version 90.0.4430.212 (Official Build) (64-bit)
     - Firefox Version 88.0.1 (64-bit)
     - Edge Version 90.0.818.62 (Official build) (64-bit)
