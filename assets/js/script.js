@@ -389,7 +389,8 @@ function startQuiz() {
   showScreen(quizScreen);
   if (closeQuizBtn) closeQuizBtn.style.display = 'flex';
   showQuestion();
-  quizScreen.focus();
+  const firstFocusable = quizScreen.querySelector('input, button, [tabindex]:not([tabindex="-1"])');
+  if (firstFocusable) firstFocusable.focus();
 }
 
 nextBtn.addEventListener('click', showNextQuestion);
